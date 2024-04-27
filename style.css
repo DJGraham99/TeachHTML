@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    color: black;
+}
+
+.subTitle{
+    text-align: center;
+}
+
+.left,
+.right {
+    flex-basis: 50%;
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+.left{
+    padding-left: 0;
+}
+
+.right{
+    padding-right: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    background: #1f1f1f;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+
+iframe {
+    width: 100%;
+    height: 92.5%;
+    background: #fff;
+    border: 0;
+    outline: 0;
+}
+
+label i {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    background: #000;
+    height: 30px;
+}
+
+.innerContainer {
+    height: 33vh;
+    padding-bottom: 5vh;
+}
+
+#output body {
+    padding: 2em;
+}
+
+#output, #output-list{
+    border: 1px solid black;
+}
+
+.dropdownList{
+    list-style: none;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+.missionBlurb{
+    padding: 1em;
+    width: 100%;
+    margin: auto;
+    background-color: #1f1f1f;
+    border-radius: 2px;
+}
+
+.codeContainer {
+    display: flex;
+    width: 100%;
+    color: white;
+
+}
+
+.outerContainer{
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    padding-left: 200px;
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    /* background-color: #f1f1f1; */
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    width: 33.33%;
+    background-color: #ccc;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 0;
+    border-top: none;
+}
+
+
+#Beginner {
+    display: block;
+}
+
+
+/* navbar */
+
+
+.navbar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+.collapsed {
+    width: 50px;
+}
+
+.novis{
+    transition: width 0.3s ease;
+    opacity: 0;
+}
+
+.navbar-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #555;
+}
+
+.navbar-header span {
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.collapsed .navbar-header span {
+    opacity: 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    border-bottom: 1px solid #555;
+}
+
+.nav-links li a {
+    padding: 1em;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+}
+
+.sideMinCont{
+    padding: 0.2em 1em !important;
+}
+
+.sideMinLi{
+    /* background-color: #555; */
+}
+
+.selected{
+    background-color: #555;
+}
+
+.displayNone{
+    display: none;
+}
+
+.smaller{
+    background-color: #555;
+}
+
+.smaller:hover{
+    background-color: white;
+}
+
+.smaller a:hover{
+    background-color: white !important;
+    color: black !important;
+}
+
+.selectedAgain{
+    background-color: white;
+}
+
+.selectedAgain a {
+    color: black !important;
+}
+
+#labContainer{
+    display: none;
+    color: white;
+}
+
+
+#introContainer{
+    display: none;
+}
+
+.topTitle{
+    text-align: center;
+}
+
+.subTitle{
+    text-decoration: underline;
+    text-align: left;
+}
+
+
+/* Dropdown */
+
+/* styles.css */
+
+.dropdown {
+    position: relative;
+    color: black;
+}
+
+.dropdowno{
+    display: none;
+}
+
+.dropdown-header {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.dropdown-header:hover {
+    background-color: #e0e0e0;
+}
+
+.dropdown-content {
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content p {
+    padding: 10px;
+    margin: 0;
+}
+
+.arrow {
+    float: right;
+}
+
+.buttonDiv{
+    width: 80%;
+    margin: auto;
+}
+
+.buttons{
+    width: 49%;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: darkgreen;
+    color: white;
+}

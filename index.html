@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/02d2734dc6.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Learn HTML & CSS</title>
+
+
+
+    <script>
+        function openLevel(evt, level) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(level).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <div class="navbar-header" id="navbar-header">
+            <i class="fas fa-bars" id="menu-btn"></i>
+            <span>Menu</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#html"><i class="fas fa-home"></i>
+                    <p class="sideTitle">&nbsp;HTML Components</p>
+                </a></li>
+            <li class="sideMinLi para"><a href="#html" class="sideMinCont">
+                    <p class="sideMin">&nbsp;Paragraphs</p>
+                </a></li>
+            <li class="sideMinLi selected"><a href="#html" class="sideMinCont">
+                    <p class="sideMin">&nbsp;Lists</p>
+                </a></li>
+
+            <li class="sideMinLi smaller intromin"><a href="#intro" class="sideMinCont">
+                    <p class="sideMin">&nbsp;○ Intro</p>
+                </a></li>
+            <li class="sideMinLi smaller usagemin"><a href="#usage" class="sideMinCont">
+                    <p class="sideMin">&nbsp;○ How to use</p>
+                </a></li>
+            <li class="sideMinLi smaller cssmin"><a href="#css" class="sideMinCont">
+                    <p class="sideMin">&nbsp;○ CSS styling</p>
+                </a></li>
+            <li class="sideMinLi smaller examplesmin"><a href="#examples" class="sideMinCont">
+                    <p class="sideMin">&nbsp;○ Examples</p>
+                </a></li>
+            <li class="sideMinLi smaller labsmin"><a href="#lab" class="sideMinCont">
+                    <p class="sideMin">&nbsp;○ Labs</p>
+                </a></li>
+
+
+
+
+            <li class="sideMinLi"><a href="#html" class="sideMinCont">
+                    <p class="sideMin">&nbsp;Headers</p>
+                </a></li>
+            <li class="sideMinLi"><a href="#html" class="sideMinCont">
+                    <p class="sideMin">&nbsp;JavaScript</p>
+                </a></li>
+            <li class="sideMinLi"><a href="#html" class="sideMinCont">
+                    <p class="sideMin">&nbsp;Breaks</p>
+                </a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i>
+                    <p class="sideTitle">&nbsp;Lorum</p>
+                </a></li>
+            <li><a href="#services"><i class="fas fa-cogs"></i>
+                    <p class="sideTitle">&nbsp;Ipsum</p>
+                </a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i>
+                    <p class="sideTitle">&nbsp;Lorum</p>
+                </a></li>
+        </ul>
+    </div>
+
+    <br>
+    <div class="outerContainer" id="labContainer">
+        <div class="tab">
+            <button class="tablinks active" onclick="openLevel(event, 'Beginner')">Beginner</button>
+            <button class="tablinks" onclick="openLevel(event, 'Intermediate')">Intermediate</button>
+            <button class="tablinks" onclick="openLevel(event, 'Advanced')">Advanced</button>
+        </div>
+        <div id="Beginner" class="tabcontent">
+            <div class="missionBlurb">
+                <h3 class="subTitle"> Task </h3> <br>
+                A colleague has been asked to produce an Email template for new insurance processes. During your code
+                review you notice that the List of items looks incorrect. Drag the tags and stylings to the correct
+                place in the HTML and CSS files to fix the design.
+            </div>
+            <div class="codeContainer">
+                <div class="left">
+                    <div class="htmlContainer innerContainer">
+                        <label><i class="fa-brands fa-html5"></i> HTML</label>
+
+                        <textarea id="html-code" class="html-code-easy" onkeyup="run()"></textarea>
+                    </div>
+
+                    <div class="cssContainer innerContainer">
+                        <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
+                        <textarea id="css-code" class="css-code-easy" onkeyup="run()"></textarea>
+                    </div>
+
+                    <!-- <label><i class="fa-brands fa-js"></i> JavaScript</label>
+            <textarea id="js-code"></textarea> -->
+                </div>
+                <div class="right">
+                    <label><i class="fa-solid fa-play"></i>Output</label>
+                    <iframe id="output" onkeyup="run()"></iframe>
+                </div>
+            </div>
+            <div class="buttonDiv">
+                <button type="button" id="verifyButton" class="buttons">
+                    Verify Solution
+                </button>
+                <button type="button" id="verifyButton" class="buttons">
+                    Reveal answer
+                </button>
+            </div>
+
+        </div>
+        <div id="Intermediate" class="tabcontent">
+            <div class="missionBlurb">
+                <h3 class="subTitle"> Task </h3> <br>
+                For an upcoming release a designer has provided you with a design for a html list that needs to be
+                completed. Please finish the design and ensure it looks the same as the design.
+            </div>
+        </div>
+        <div id="Advanced" class="tabcontent">
+            <div class="missionBlurb">
+                <h3 class="subTitle"> Task </h3> <br>
+                A JIRA ticket has been attached with details of the implementation of a list needed for a new release.
+                Please follow the Jira tickets to create the HTML list.
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <div class="outerContainer" id="examplesContainer">
+        <br>
+        <h2 class="topTitle"> Lists examples </h2>
+        <br>
+        <h3 class="subTitle"> Examples in the bank </h3>
+        <br>
+        <ul>
+            <li class="dropdownList">
+                <div class="dropdown">
+                    <div class="dropdown-header" onclick="toggleDropdown('dropdown-content')">Email Templates: <span
+                            class="arrow">Show
+                            code &#9660;</span></div>
+                    <div class="dropdown-content">
+                        <div class="codeContainer">
+                            <div class="left">
+                                <div class="htmlContainer innerContainer">
+                                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+
+                                    <textarea id="html-code-list" class="html-code-easy" onkeyup="run()"></textarea>
+                                </div>
+
+                                <div class="cssContainer innerContainer">
+                                    <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
+                                    <textarea id="css-code-list" class="css-code-easy" onkeyup="run()"></textarea>
+                                </div>
+
+                                <!-- <label><i class="fa-brands fa-js"></i> JavaScript</label>
+                    <textarea id="js-code"></textarea> -->
+                            </div>
+                            <div class="right">
+                                <label><i class="fa-solid fa-play"></i>Output</label>
+                                <iframe id="output-list" onkeyup="run()"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdownList">
+                <div class="dropdown">
+                    <div class="dropdown-header" onclick="toggleDropdown('dropdownlistcontent')">Web applications <span
+                            class="arrow">Show
+                            code &#9660;</span></div>
+                    <div class="dropdown-content dropdownlistcontent">
+                        CONTENT HERE
+                    </div>
+                </div>
+            </li>
+            <li class="dropdownList">
+                <div class="dropdown">
+                    <div class="dropdown-header" onclick="toggleDropdown('dropdownnav')">Navigation menus <span
+                            class="arrow">Show
+                            code &#9660;</span></div>
+                    <div class="dropdown-content dropdownnav">
+                        CONTENT HERE
+                    </div>
+                </div>
+            </li>
+            </li>
+        </ul>
+
+        <h3 class="subTitle"> Examples elsewhere </h3>
+        <br>
+        <ul>
+            <li class="dropdownList">
+                <div class="dropdown">
+                    <div class="dropdown-header" onclick="toggleDropdown('dropdownshop')">Ecommerce shops <span
+                            class="arrow">Show
+                            code &#9660;</span></div>
+                    <div class="dropdown-content dropdownshop">
+                        CONTENT HERE
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <div class="outerContainer" id="introContainer">
+        <br>
+        <h2 class="topTitle"> HTML Lists </h2>
+        <br>
+        <h3 class="subTitle"> What are HTML Lists </h3>
+        <br>
+        <p>
+            HTML lists are a fundamental component of web development used to organize and display information in a
+            structured manner. They allow you to present content in a hierarchical or sequential format, making it
+            easier for users to comprehend and navigate through the information. </p>
+        <br>
+        <h3 class="subTitle"> Variations of HTML Lists </h3>
+        <br>
+
+        <ul>
+            <h4 class="subTitle"> Ordered lists </h4>
+            <p>This is like a numbered list, perhaps for steps in a recipe or instructions you need to follow. In HTML,
+                this starts with an &lt;ol&gt; tag (think "ordered list") and just like the unordered list, each item is
+                wrapped in &lt;li&gt; tags.</p>
+            <li class="dropdownList">
+                <div class="dropdown">
+                    <div class="dropdown-header" onclick="toggleDropdown('dropdowno')">Ordered lists <span
+                            class="arrow">Show
+                            code &#9660;</span></div>
+                    <div class="dropdowno">
+                        <div class="codeContainer">
+                            <div class="left">
+                                <div class="htmlContainer innerContainer">
+                                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+
+                                    <textarea id="html-code-listo" class="html-code-easy" onkeyup="run()"></textarea>
+                                </div>
+
+                                <div class="cssContainer innerContainer">
+                                    <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
+                                    <textarea id="css-code-listo" class="css-code-easy" onkeyup="run()"></textarea>
+                                </div>
+
+                                <!-- <label><i class="fa-brands fa-js"></i> JavaScript</label>
+                    <textarea id="js-code"></textarea> -->
+                            </div>
+                            <div class="right">
+                                <label><i class="fa-solid fa-play"></i>Output</label>
+                                <iframe id="output-listo" onkeyup="run()"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <ul>
+            <h4 class="subTitle"> Unordered lists </h4>
+            <p> This is like a regular shopping list where things aren't necessarily important in any specific order.
+                You might use it to write down ingredients for a recipe. In HTML, this list starts with a &lt;ul&gt; tag
+                (think "unordered list") and each item on the list is wrapped in an &lt;li&gt; tag (think "list item").
+                Unordered List: This is like a regular shopping list where things aren't necessarily important in any
+                specific order. You might use it to write down ingredients for a recipe. In HTML, this list starts with
+                a &lt;ul&gt; tag (think "unordered list") and each item on the list is wrapped in an &lt;li&gt; tag
+                (think "list item").
+
+                <li class="dropdownList">
+                    <div class="dropdown">
+                        <div class="dropdown-header" onclick="toggleDropdown('dropdownuno')">Unordered lists<span
+                                class="arrow">Show
+                                code &#9660;</span></div>
+                        <div class="dropdown-content dropdownuno">
+                            CONTENT HERE
+                        </div>
+                    </div>
+                </li>
+        </ul>
+
+        <br>
+        <br>
+        <ul>
+            <h4 class="subTitle"> Definition lists </h4>
+            <p>This is a bit different, like a mini dictionary within your code. It's useful for explaining terms. In
+                HTML, this starts with a &lt;dl&gt; tag (think "definition list"). Each term you want to define goes
+                inside a &lt;dt&gt; tag (think "definition term"), and the explanation for that term goes inside a
+                &lt;dd&gt; tag (think "definition description").</p>
+            <li class="dropdownList">
+                <div class="dropdown">
+                    <div class="dropdown-header" onclick="toggleDropdown('dropdowndef')">Definition lists <span
+                            class="arrow">Show
+                            code &#9660;</span></div>
+                    <div class="dropdown-content dropdowndef">
+                        CONTENT HERE
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <br><br>
+
+        <h3 class="subTitle"> What are common uses of HTML lists </h3>
+        <br>
+        HTML lists serve various purposes in web development, providing a structured way to organize and present
+        information. Ordered lists are ideal for presenting content in a sequential order, such as steps in a tutorial
+        or items in a ranked list. Unordered lists, on the other hand, are useful for displaying items in a bulleted or
+        unordered format, commonly employed for navigation menus, feature lists, or any content where the order is not
+        significant. Definition lists offer a means to present terms and their corresponding definitions, making them
+        suitable for glossaries, dictionaries, or any content requiring term-definition pairs. Overall, HTML lists offer
+        a versatile toolset for developers to create well-structured and easily navigable web content.
+        For more information of its uses see <a href="#examples">List Examples </a>
+        <br>
+        <br>
+    </div>
+    <div class="outerContainer" id="usageContainer">
+        <br>
+        <h2 class="topTitle"> How to use HTML Lists </h2>
+        <br>
+        <h3 class="subTitle"> Explanation of tags</h3>
+        <br>
+        <h4 class="subTitle">List Type Tags </h4>
+        <ul>
+            <li><strong>&lt;ul&gt;</strong>: This tag tells the webpage to start an unordered list. Imagine it as the
+                label at the top of your grocery list that says "Pick up these things." </li>
+            <li><strong>&lt;ol&gt;</strong>: This tag tells the webpage to control an ordered list. Think of it like the
+                numbers at the beginning of recipe steps. </li>
+            <li><strong>&lt;dl&gt;</strong>: This tag is used for a definition list. Imagine a mini dictionary inside
+                your webpage, where you want to explain terms. </li>
+        </ul>
+        <br>
+        <h4 class="subTitle">List Item Tags </h4>
+        <ul>
+            <li><strong>&lt;li&gt;</strong>: This tag is for each list item in an unordered or ordered list. It's like
+                each item you write down on your grocery list or each step in your recipe. </li>
+            <li><strong>&lt;dt&gt;</strong>: This tag is used for each definition term in a definition list. This is the
+                word or phrase you're defining.</li>
+            <li><strong>&lt;dd&gt;</strong>: This tag is used for each definition description in a definition list. This
+                explains what the term <dt> means. </dt>
+        </ul> <br>
+        <h4 class="subTitle">Other useful tags </h4>
+        <ul>
+            <li><strong>&lt;p&gt;</strong>: This tag creates a paragraph. Think of it as a separate section of text in
+                your list, like a note at the bottom of your grocery list reminding yourself to buy milk. </li>
+            <li><strong>&lt;br&gt;</strong>: This tag inserts a line break. Imagine you accidentally wrote an item on
+                the wrong line of your shopping list, this tag would let you move it down a line without starting a new
+                paragraph. </li>
+            <li><strong>&lt;span&gt;</strong>: This tag can be used within list items to apply specific styles to a
+                portion of text. Imagine you want to highlight a particular item on your grocery list as urgent, you
+                could use &lt;span&gt; with a style tag to bold it. </span>
+        </ul>
+        <br>
+        <div class="tab">
+            <button class="tablinks active" onclick="openLevel(event, 'Beginner')">Ordered</button>
+            <button class="tablinks" onclick="openLevel(event, 'Intermediate')">Unordered</button>
+            <button class="tablinks" onclick="openLevel(event, 'Advanced')">Defintion</button>
+        </div>
+        <div id="Beginner" class="tabcontent">
+            <div class="codeContainer">
+                <div class="left">
+                    <div class="htmlContainer innerContainer">
+                        <label><i class="fa-brands fa-html5"></i> HTML</label>
+
+                        <textarea id="html-code" class="html-code-easy" onkeyup="run()"></textarea>
+                    </div>
+
+                    <div class="cssContainer innerContainer">
+                        <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
+                        <textarea id="css-code" class="css-code-easy" onkeyup="run()"></textarea>
+                    </div>
+
+                    <!-- <label><i class="fa-brands fa-js"></i> JavaScript</label>
+        <textarea id="js-code"></textarea> -->
+                </div>
+                <div class="right">
+                    <label><i class="fa-solid fa-play"></i>Output</label>
+                    <iframe id="output" onkeyup="run()"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="Intermediate" class="tabcontent">
+            Intermediate
+        </div>
+        <div id="Advanced" class="tabcontent">
+            Advanced
+        </div>
+    </div>
+    <div class="outerContainer" id="cssContainer">
+        <h2 class="topTitle"> CSS Styling </h2>
+        <br>
+        <h3 class="subTitle"> Common css styles for lists </h3>
+        <br>
+        <ul>
+
+            <li>
+                <strong>List Style Type (list-style-type)</strong>: This property controls the bullet or numbering style
+                used for list items. It works on both ordered and unordered lists.
+
+                <br> <br><strong>Examples:</strong>
+                <br> list-style-type: square; (makes square bullets)
+                <br>list-style-type: circle; (makes circle bullets)
+                <br>list-style-type: lower-roman; (uses lowercase roman numerals)
+            </li>
+            <br>
+            <li>
+                <strong> List Style Position (list-style-position)</strong>: This property controls where the list item
+                marker (bullet or number) appears relative to the list item text.
+                <br> <br>
+                <strong> Examples: </strong>
+                <br> list-style-position: inside; (places the marker within the list item text)
+                <br>list-style-position: outside; (default, places the marker to the left of the list item text)
+            </li>
+            <br>
+            <li>
+                <strong>List Style Image (list-style-image)</strong>: This property allows you to replace the default
+                bullet or number with a custom image.
+                <br> <br>
+                <strong>Example:</strong>
+                <br>list-style-image: url("images/star.png"); (uses an image named "star.png" as the bullet)
+            </li>
+            <br>
+            <li>
+                <strong> Margin and Padding: </strong> Margin and padding properties work just like with any other HTML
+                element. You can use them to control the spacing around the entire list or around individual list items.
+                <br><br>
+                <strong> Examples: </strong>
+                <br>margin-left: 20px; (adds 20px space to the left side of the list)
+                <br>padding-bottom: 10px; (adds 10px space at the bottom of each list item)
+            </li>
+            <br>
+            <li>
+                <strong>Text Styles:</strong> You can use any standard CSS text properties like font-family, color, and
+                font-size to style the text within your list items.
+            </li>
+        </ul>
+        <div id="Beginner" class="tabcontent">
+            <div class="codeContainer">
+                <div class="left">
+                    <div class="htmlContainer innerContainer">
+                        <label><i class="fa-brands fa-html5"></i> HTML</label>
+
+                        <textarea id="html-code" class="html-code-easy" onkeyup="run()"></textarea>
+                    </div>
+
+                    <div class="cssContainer innerContainer">
+                        <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
+                        <textarea id="css-code" class="css-code-easy" onkeyup="run()"></textarea>
+                    </div>
+
+                    <!-- <label><i class="fa-brands fa-js"></i> JavaScript</label>
+    <textarea id="js-code"></textarea> -->
+                </div>
+                <div class="right">
+                    <label><i class="fa-solid fa-play"></i>Output</label>
+                    <iframe id="output" onkeyup="run()"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        document.getElementsByClassName('html-code-easy')[0].innerHTML =
+            '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Email Template</title> \n</head>\n<body>\n    <div class="email-container">\n        <h1>Welcome to Our Newsletter!</h1>\n        <p>Dear Subscriber,</p>\n        <p>Thank you for subscribing to our newsletter. Were excited to share updates and news with you!</p>\n        <p>Sincerely,</p>\n        <p>The Newsletter Team</p>\n    </div>\n</body>\n</html>';
+
+        document.getElementsByClassName('css-code-easy')[0].innerHTML =
+            'body { width: 80%; margin: auto;}   \n h1, p {\n    margin: 0;\n    padding: 0;\n}\n\n.email-container {\n    max-width: 600px;\n    margin: 0 auto;\n    padding: 20px;\n    font-family: Arial, sans-serif;\n    background-color: #f9f9f9;\n    border: 1px solid #ddd;\n    border-radius: 5px;\n}\n\nh1 {\n    font-size: 24px;\n    margin-bottom: 10px;\n}\n\np {\n    font-size: 16px;\n    line-height: 1.5;\n    margin-bottom: 10px;\n}'
+
+        document.getElementById('html-code-list').innerHTML =
+            '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Nice List</title>\n    <link rel="stylesheet" href="styles.css">\n</head>\n<body>\n    <ul class="nice-list">\n        <li>Item 1</li>\n        <li>Item 2</li>\n        <li>Item 3</li>\n        <li>Item 4</li>\n        <li>Item 5</li>\n    </ul>\n</body>\n</html>\n';
+
+        document.getElementById('css-code-list').innerHTML =
+            '/* styles.css */\nbody {\n    font-family: Arial, sans-serif;\n    background-color: #f0f0f0;\n}\n\n.nice-list {\n    list-style: none;\n    padding: 0;\n    margin: 20px;\n}\n\n.nice-list li {\n    background-color: #fff;\n    border-radius: 5px;\n    padding: 10px;\n    margin-bottom: 5px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    transition: background-color 0.3s ease;\n}\n\n.nice-list li:hover {\n    background-color: #f0f0f0;\n}\n'
+
+        document.getElementById('html-code-listo').innerHTML =
+            '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Nice List</title>\n    <link rel="stylesheet" href="styles.css">\n</head>\n<body>\n    <ul class="nice-list">\n        <li>Item 1</li>\n        <li>Item 2</li>\n        <li>Item 3</li>\n        <li>Item 4</li>\n        <li>Item 5</li>\n    </ul>\n</body>\n</html>\n';
+
+        document.getElementById('css-code-listo').innerHTML =
+            '/* styles.css */\nbody {\n    font-family: Arial, sans-serif;\n    background-color: #f0f0f0;\n}\n\n.nice-list {\n    list-style: none;\n    padding: 0;\n    margin: 20px;\n}\n\n.nice-list li {\n    background-color: #fff;\n    border-radius: 5px;\n    padding: 10px;\n    margin-bottom: 5px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    transition: background-color 0.3s ease;\n}\n\n.nice-list li:hover {\n    background-color: #f0f0f0;\n}\n'
+
+        run()
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.getElementById("navbar-header");
+        const navbar = document.getElementById("navbar");
+        const titles = document.getElementsByClassName("sideTitle");
+        const sideMin = document.getElementsByClassName("sideMinLi");
+
+
+        menuBtn.addEventListener("click", function () {
+            for (let i = 0; i < titles.length; i++) {
+                // Add a class to each element
+                titles[i].classList.toggle("novis");
+            }
+            for (let i = 0; i < sideMin.length; i++) {
+                // Add a class to each element
+                sideMin[i].classList.toggle("displayNone");
+            }
+
+            navbar.classList.toggle("collapsed");
+        });
+
+
+    });
+
+
+    // script.js
+    window.onhashchange = function () {
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        var intro = document.getElementById("introContainer");
+        var lab = document.getElementById("labContainer");
+        var usage = document.getElementById("usageContainer");
+        var examples = document.getElementById("examplesContainer");
+        var css = document.getElementById("cssContainer");
+        var labsmin = document.getElementsByClassName("labsmin")[0];
+        var examplesmin = document.getElementsByClassName("examplesmin")[0];
+        var intromin = document.getElementsByClassName("intromin")[0];
+        var usagemin = document.getElementsByClassName("usagemin")[0];
+        var cssmin = document.getElementsByClassName("cssmin")[0];
+        intro.style.display = "none";
+        lab.style.display = "none";
+        usage.style.display = "none";
+        examples.style.display = "none";
+        css.style.display = "none";
+        if (intromin.classList.contains("selectedAgain")) { intromin.classList.remove("selectedAgain") }
+        if (usagemin.classList.contains("selectedAgain")) { usagemin.classList.remove("selectedAgain") }
+        if (examplesmin.classList.contains("selectedAgain")) { examplesmin.classList.remove("selectedAgain") }
+        if (labsmin.classList.contains("selectedAgain")) { labsmin.classList.remove("selectedAgain") }
+        if (cssmin.classList.contains("selectedAgain")) { cssmin.classList.remove("selectedAgain") }
+        // Check if the 'page' parameter exists
+        if (window.location.href.includes("intro")) {
+            // Get the value of the 'page' parameter
+            intro.style.display = "block";
+            intromin.classList.add("selectedAgain")
+        }
+        else if (window.location.href.includes("lab")) {
+            lab.style.display = "block";
+            labsmin.classList.add("selectedAgain")
+        }
+        else if (window.location.href.includes("usage")) {
+            usage.style.display = "block";
+            usagemin.classList.add("selectedAgain")
+        }
+        else if (window.location.href.includes("examples")) {
+            examples.style.display = "block";
+            examplesmin.classList.add("selectedAgain")
+        }
+        else if (window.location.href.includes("css")) {
+            css.style.display = "block";
+            cssmin.classList.add("selectedAgain")
+        }
+    };
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        var intro = document.getElementById("introContainer");
+        var lab = document.getElementById("labContainer");
+        var usage = document.getElementById("usageContainer");
+        var examples = document.getElementById("examplesContainer");
+        var css = document.getElementById("cssContainer");
+        var labsmin = document.getElementsByClassName("labsmin")[0];
+        var examplesmin = document.getElementsByClassName("examplesmin")[0];
+        var intromin = document.getElementsByClassName("intromin")[0];
+        var usagemin = document.getElementsByClassName("usagemin")[0];
+        var cssmin = document.getElementsByClassName("cssmin")[0];
+        intro.style.display = "none";
+        lab.style.display = "none";
+        usage.style.display = "none";
+        examples.style.display = "none";
+        css.style.display = "none";
+        if (intromin.classList.contains("selectedAgain")) { intromin.classList.remove("selectedAgain") }
+        if (usagemin.classList.contains("selectedAgain")) { usagemin.classList.remove("selectedAgain") }
+        if (examplesmin.classList.contains("selectedAgain")) { examplesmin.classList.remove("selectedAgain") }
+        if (labsmin.classList.contains("selectedAgain")) { labsmin.classList.remove("selectedAgain") }
+        if (cssmin.classList.contains("selectedAgain")) { cssmin.classList.remove("selectedAgain") }
+        // Check if the 'page' parameter exists
+        if (window.location.href.includes("intro")) {
+            // Get the value of the 'page' parameter
+            intro.style.display = "block";
+            intromin.classList.add("selectedAgain")
+        }
+        else if (window.location.href.includes("lab")) {
+            lab.style.display = "block";
+            labsmin.classList.add("selectedAgain")
+        }
+        else if (window.location.href.includes("usage")) {
+            usage.style.display = "block";
+            usagemin.classList.add("selectedAgain")
+        }
+        else if (window.location.href.includes("examples")) {
+            examples.style.display = "block";
+            examplesmin.classList.add("selectedAgain")
+        }
+        else if (window.location.href.includes("css")) {
+            css.style.display = "block";
+            cssmin.classList.add("selectedAgain")
+        }
+    });
+
+    function toggleDropdown(dropdown) {
+        var dropdownContent = document.querySelector('.' + dropdown);
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    }
+
+
+
+</script>
+
+</html>
